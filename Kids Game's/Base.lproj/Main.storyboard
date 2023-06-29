@@ -1,24 +1,643 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mqb-aU-Yhc">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--First Page-->
+        <scene sceneID="w68-sU-IbH">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="firstPage" id="FN6-0u-g5i" customClass="firstPage" customModule="Kids_Game_s" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OEs-NN-qgb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="bc" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Rd-Dme">
+                                <rect key="frame" x="-17" y="0.0" width="412" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH2-y9-Tc9">
+                                <rect key="frame" x="93" y="590" width="193" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play"/>
+                                <connections>
+                                    <action selector="PlayButton:" destination="FN6-0u-g5i" eventType="touchUpInside" id="HW4-bb-3u6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nbe-fg-yXX"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Tft-3G-J2h"/>
+                    <connections>
+                        <outlet property="BT" destination="aH2-y9-Tc9" id="wpj-Tb-RvY"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zv3-0v-kCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1023.2" y="-28.078817733990149"/>
+        </scene>
+        <!--Second Page-->
+        <scene sceneID="Vkx-uf-d44">
+            <objects>
+                <viewController storyboardIdentifier="secondPage" id="gFW-zK-WPW" customClass="secondPage" customModule="Kids_Game_s" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EiS-XO-QBO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="secondPage" translatesAutoresizingMaskIntoConstraints="NO" id="ZFI-Go-dek">
+                                <rect key="frame" x="-7" y="-7" width="390" height="844"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="844" id="rcz-o5-0fp"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-nk-eqM">
+                                <rect key="frame" x="16" y="425" width="343" height="387"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4t0-kD-0D8">
+                                    <size key="itemSize" width="343" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCellForSecondPage1" reuseIdentifier="cell" id="ZcP-RZ-K5G" customClass="CollectionViewCellForSecondPage1" customModule="Kids_Game_s" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ekt-mx-fYF">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vNj-xx-byb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="343" height="80"/>
+                                        <connections>
+                                            <outlet property="imgForsecondPage" destination="vNj-xx-byb" id="p69-ZH-X2I"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="gFW-zK-WPW" id="Rj5-3i-aW4"/>
+                                    <outlet property="delegate" destination="gFW-zK-WPW" id="AMc-k4-EfL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dlh-Q5-R8O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZFI-Go-dek" firstAttribute="top" secondItem="EiS-XO-QBO" secondAttribute="top" constant="-7" id="2EV-d2-fWN"/>
+                            <constraint firstAttribute="bottom" secondItem="ZFI-Go-dek" secondAttribute="bottom" constant="-25" id="dSe-Wq-vtr"/>
+                            <constraint firstAttribute="trailing" secondItem="ZFI-Go-dek" secondAttribute="trailing" constant="-8" id="jyT-Ei-Gif"/>
+                            <constraint firstItem="ZFI-Go-dek" firstAttribute="leading" secondItem="EiS-XO-QBO" secondAttribute="leading" constant="-7" id="wjE-uK-WC6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cv" destination="g2f-nk-eqM" id="Lx3-e3-UCR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Hj-e9-rYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736.8" y="-28.078817733990149"/>
+        </scene>
+        <!--Dpage-->
+        <scene sceneID="pcC-ip-HzO">
+            <objects>
+                <viewController storyboardIdentifier="ABCDpage" id="YEL-TF-9ua" customClass="ABCDpage" customModule="Kids_Game_s" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bBZ-6T-iKu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ABCD bc" translatesAutoresizingMaskIntoConstraints="NO" id="jok-K1-1Sp">
+                                <rect key="frame" x="-14" y="-7" width="402" height="819"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="819" id="aKF-7n-4Pt"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Q7-hj-GAk">
+                                <rect key="frame" x="16" y="79" width="343" height="733"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VdR-Ig-WY9">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCellForABCDpage" reuseIdentifier="cell" id="jkZ-rR-If8" customClass="CollectionViewCellForABCDpage" customModule="Kids_Game_s" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Qc-kj-yVC">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbD-3D-4qe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="135"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="145" height="135"/>
+                                        <connections>
+                                            <outlet property="imgForABCD" destination="MbD-3D-4qe" id="arg-3b-5gC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="YEL-TF-9ua" id="qGq-zT-cM8"/>
+                                    <outlet property="delegate" destination="YEL-TF-9ua" id="Kok-2V-gGw"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHR-eT-2Sw">
+                                <rect key="frame" x="16" y="35" width="43" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back"/>
+                                <connections>
+                                    <action selector="back:" destination="YEL-TF-9ua" eventType="touchUpInside" id="zUm-YA-eFd"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Alphabets" translatesAutoresizingMaskIntoConstraints="NO" id="evZ-zO-ldq">
+                                <rect key="frame" x="112" y="30" width="150" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="ADt-IJ-XuH">
+                                <rect key="frame" x="214" y="306" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="E8e-iK-LF5">
+                                <rect key="frame" x="142" y="546" width="38" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="Wid-4H-edG">
+                                <rect key="frame" x="194" y="609" width="56" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="46i-3A-k7R">
+                                <rect key="frame" x="335" y="574" width="68" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="Exh-p1-3yO">
+                                <rect key="frame" x="348" y="413" width="68" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="Z9v-UO-gBV">
+                                <rect key="frame" x="92" y="295" width="42" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="eye-zV-RHf">
+                                <rect key="frame" x="-28" y="244" width="68" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="sO4-8Z-a0D">
+                                <rect key="frame" x="291" y="153" width="84" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="v2Q-UB-FhQ">
+                                <rect key="frame" x="166" y="413" width="68" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ESC-HA-vgo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jok-K1-1Sp" firstAttribute="leading" secondItem="bBZ-6T-iKu" secondAttribute="leading" constant="-14" id="3Uk-bs-qUG"/>
+                            <constraint firstAttribute="trailing" secondItem="jok-K1-1Sp" secondAttribute="trailing" constant="-13" id="uXF-xb-GWc"/>
+                            <constraint firstItem="jok-K1-1Sp" firstAttribute="top" secondItem="bBZ-6T-iKu" secondAttribute="top" constant="-7" id="yCk-eO-v3a"/>
+                            <constraint firstAttribute="bottom" secondItem="jok-K1-1Sp" secondAttribute="bottom" id="ybi-4s-d7C"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cv" destination="9Q7-hj-GAk" id="6PS-oO-Kkf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IoJ-FE-Yuy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2437.5999999999999" y="-28.078817733990149"/>
+        </scene>
+        <!--Number Page-->
+        <scene sceneID="fBY-RJ-tp8">
+            <objects>
+                <viewController storyboardIdentifier="numberPage" id="iyj-Vd-Rfq" customClass="numberPage" customModule="Kids_Game_s" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kit-Sx-ODu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ABCD bc" translatesAutoresizingMaskIntoConstraints="NO" id="EfK-ie-Kr6">
+                                <rect key="frame" x="-22" y="-24" width="408" height="873"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="408" id="8yP-91-EPb"/>
+                                    <constraint firstAttribute="height" constant="873" id="i5w-Cp-2iP"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pY7-aC-bCQ">
+                                <rect key="frame" x="16" y="79" width="343" height="733"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="733" id="DEi-sH-K25"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yvw-KW-99h">
+                                    <size key="itemSize" width="165" height="148"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCellForNumber" reuseIdentifier="cell" id="hZI-BR-car" customClass="CollectionViewCellForNumber" customModule="Kids_Game_s" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kvg-Dd-2sr">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ox-yF-w5Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="148"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="165" height="148"/>
+                                        <connections>
+                                            <outlet property="imgForNumber" destination="3ox-yF-w5Q" id="AU2-hx-7g2"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="iyj-Vd-Rfq" id="HcO-6J-v2Q"/>
+                                    <outlet property="delegate" destination="iyj-Vd-Rfq" id="QCx-d4-aVg"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afA-sH-ksv">
+                                <rect key="frame" x="16" y="31" width="43" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back"/>
+                                <connections>
+                                    <action selector="back:" destination="iyj-Vd-Rfq" eventType="touchUpInside" id="axc-8n-RZr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Numbers" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Y-gC-gaS">
+                                <rect key="frame" x="107" y="31" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="V63-1j-0SK">
+                                <rect key="frame" x="166" y="459" width="75" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="p4d-0e-tna">
+                                <rect key="frame" x="334" y="435" width="113" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="Gi3-FK-aPI">
+                                <rect key="frame" x="260" y="770" width="81" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="ugv-xJ-bWw">
+                                <rect key="frame" x="49" y="358" width="82" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-bB-4fj">
+                                <rect key="frame" x="228" y="162" width="29" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="69s-XU-wPs">
+                                <rect key="frame" x="82" y="648" width="54" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="559-sF-ET2">
+                                <rect key="frame" x="16" y="171" width="82" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="FjB-Nc-fQ1">
+                                <rect key="frame" x="244" y="227" width="73" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Hr-Wk-6Bn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Hr-Wk-6Bn" firstAttribute="trailing" secondItem="pY7-aC-bCQ" secondAttribute="trailing" constant="16" id="2yO-rT-U16"/>
+                            <constraint firstAttribute="trailing" secondItem="EfK-ie-Kr6" secondAttribute="trailing" constant="-11" id="Aig-ig-nis"/>
+                            <constraint firstItem="pY7-aC-bCQ" firstAttribute="leading" secondItem="1Hr-Wk-6Bn" secondAttribute="leading" constant="16" id="CWZ-6D-5bg"/>
+                            <constraint firstItem="EfK-ie-Kr6" firstAttribute="top" secondItem="Kit-Sx-ODu" secondAttribute="top" constant="-24" id="NES-fu-zlU"/>
+                            <constraint firstAttribute="bottom" secondItem="pY7-aC-bCQ" secondAttribute="bottom" id="U8N-NU-lFh"/>
+                            <constraint firstItem="pY7-aC-bCQ" firstAttribute="top" secondItem="Kit-Sx-ODu" secondAttribute="top" constant="79" id="YDS-qw-iCN"/>
+                            <constraint firstItem="EfK-ie-Kr6" firstAttribute="leading" secondItem="Kit-Sx-ODu" secondAttribute="leading" constant="-22" id="quP-DY-zeX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cv" destination="pY7-aC-bCQ" id="L00-fV-La8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Nb-UE-fd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3212" y="-28.078817733990149"/>
+        </scene>
+        <!--Colour Page-->
+        <scene sceneID="qdl-sH-W1G">
+            <objects>
+                <viewController storyboardIdentifier="colourPage" id="1CZ-to-jtg" customClass="colourPage" customModule="Kids_Game_s" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0rr-Za-GrM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ABCD bc" translatesAutoresizingMaskIntoConstraints="NO" id="0Su-pl-Obh">
+                                <rect key="frame" x="-30" y="-4" width="434" height="844"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="844" id="T52-R0-7kb"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YAP-6c-XSV">
+                                <rect key="frame" x="16" y="79" width="343" height="733"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oTV-IY-n0S">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCellForColour" reuseIdentifier="cell" id="Qac-Cs-Mni" customClass="CollectionViewCellForColour" customModule="Kids_Game_s" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6GA-dK-vJ8">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-Wn-4Q0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="148"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="165" height="148"/>
+                                        <connections>
+                                            <outlet property="imgForColour" destination="HC6-Wn-4Q0" id="OQE-hm-z2e"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1CZ-to-jtg" id="BHc-Za-8VY"/>
+                                    <outlet property="delegate" destination="1CZ-to-jtg" id="cOG-lU-uay"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNH-21-P1f">
+                                <rect key="frame" x="16" y="31" width="43" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back"/>
+                                <connections>
+                                    <action selector="back:" destination="1CZ-to-jtg" eventType="touchUpInside" id="cTD-ON-Ifc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="colours" translatesAutoresizingMaskIntoConstraints="NO" id="gPw-wo-exI">
+                                <rect key="frame" x="112" y="31" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qLd-jv-l61"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Su-pl-Obh" secondAttribute="trailing" constant="-29" id="2To-tL-wNV"/>
+                            <constraint firstItem="0Su-pl-Obh" firstAttribute="top" secondItem="0rr-Za-GrM" secondAttribute="top" constant="-4" id="I5b-dY-BQJ"/>
+                            <constraint firstAttribute="bottom" secondItem="0Su-pl-Obh" secondAttribute="bottom" constant="-28" id="ONp-jb-A6d"/>
+                            <constraint firstItem="0Su-pl-Obh" firstAttribute="leading" secondItem="0rr-Za-GrM" secondAttribute="leading" constant="-30" id="pCj-0z-o4x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cv" destination="YAP-6c-XSV" id="Mnc-xx-li5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUg-qP-Ka8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3930.4000000000001" y="-21.428571428571431"/>
+        </scene>
+        <!--Tow Za Page-->
+        <scene sceneID="6mx-31-irj">
+            <objects>
+                <viewController storyboardIdentifier="TowZaPage" id="HwE-I0-EPq" customClass="TowZaPage" customModule="Kids_Game_s" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QwE-UY-IWg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ABCD bc" translatesAutoresizingMaskIntoConstraints="NO" id="Rmp-0P-PKh">
+                                <rect key="frame" x="-38" y="-2" width="451" height="857"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="857" id="sbT-GR-n6N"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-Ws-i9n">
+                                <rect key="frame" x="16" y="79" width="343" height="733"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0rt-8E-hNJ">
+                                    <size key="itemSize" width="334" height="75"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCellFormultiPlicationTabel" reuseIdentifier="cell" id="6Rz-RJ-J2v" customClass="CollectionViewCellFormultiPlicationTabel" customModule="Kids_Game_s" customModuleProvider="target">
+                                        <rect key="frame" x="4.666666666666667" y="0.0" width="334" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dSO-7X-Fm7">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzJ-Qc-NOf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="334" height="75"/>
+                                        <connections>
+                                            <outlet property="imgFormultiPlicationTabel" destination="CzJ-Qc-NOf" id="Hc3-lY-k28"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="HwE-I0-EPq" id="7Tb-x4-tbe"/>
+                                    <outlet property="delegate" destination="HwE-I0-EPq" id="NcK-j7-IeC"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVA-D0-jmG">
+                                <rect key="frame" x="16" y="32" width="44" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back"/>
+                                <connections>
+                                    <action selector="back:" destination="HwE-I0-EPq" eventType="touchUpInside" id="TNd-Vk-YtU"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="table" translatesAutoresizingMaskIntoConstraints="NO" id="b7q-Jz-jii">
+                                <rect key="frame" x="114" y="35" width="147" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ryX-xW-Nhb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rmp-0P-PKh" firstAttribute="leading" secondItem="QwE-UY-IWg" secondAttribute="leading" constant="-38" id="AYD-uu-R0a"/>
+                            <constraint firstAttribute="trailing" secondItem="Rmp-0P-PKh" secondAttribute="trailing" constant="-38" id="LXm-0R-fSN"/>
+                            <constraint firstItem="Rmp-0P-PKh" firstAttribute="top" secondItem="QwE-UY-IWg" secondAttribute="top" constant="-2" id="PQ9-Ro-HBK"/>
+                            <constraint firstAttribute="bottom" secondItem="Rmp-0P-PKh" secondAttribute="bottom" constant="-43" id="hJW-hV-Y7Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cv" destination="7cX-Ws-i9n" id="sBz-XK-yhT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPC-ec-OHw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4644" y="-21.428571428571431"/>
+        </scene>
+        <!--Animal Page-->
+        <scene sceneID="3kR-6K-mJc">
+            <objects>
+                <viewController storyboardIdentifier="AnimalPage" id="jM1-SM-nBQ" customClass="AnimalPage" customModule="Kids_Game_s" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="06I-an-NWE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="animalBC" translatesAutoresizingMaskIntoConstraints="NO" id="G4G-rv-NyV">
+                                <rect key="frame" x="-8" y="0.0" width="390" height="844"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="844" id="37e-iS-9kR"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yRV-ji-ci7">
+                                <rect key="frame" x="0.0" y="59" width="382" height="411"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TcP-BQ-Glj">
+                                    <size key="itemSize" width="375" height="391"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCellForAnimal" reuseIdentifier="cell" id="QP6-Hz-fz9" customClass="CollectionViewCellForAnimal" customModule="Kids_Game_s" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="10" width="375" height="391"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Ze-2p-N1P">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="391"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VcD-CL-oLb">
+                                                    <rect key="frame" x="43" y="268" width="287" height="115"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="113" id="yJw-1F-FTc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tdz-zx-dEI">
+                                                    <rect key="frame" x="86" y="28" width="201" height="53"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="53" id="cFi-o0-dIX"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="VcD-CL-oLb" secondAttribute="trailing" constant="45" id="Cqd-tW-lkj"/>
+                                                <constraint firstAttribute="bottom" secondItem="VcD-CL-oLb" secondAttribute="bottom" constant="8" id="GvS-DP-MOq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tdz-zx-dEI" secondAttribute="trailing" constant="88" id="Mf8-he-tsh"/>
+                                                <constraint firstItem="Tdz-zx-dEI" firstAttribute="top" secondItem="0Ze-2p-N1P" secondAttribute="top" constant="28" id="PV0-xB-09G"/>
+                                                <constraint firstItem="VcD-CL-oLb" firstAttribute="leading" secondItem="0Ze-2p-N1P" secondAttribute="leading" constant="43" id="Xta-VH-Qo0"/>
+                                                <constraint firstItem="VcD-CL-oLb" firstAttribute="top" secondItem="Tdz-zx-dEI" secondAttribute="bottom" constant="187" id="ky7-d4-ANf"/>
+                                                <constraint firstItem="VcD-CL-oLb" firstAttribute="top" secondItem="Tdz-zx-dEI" secondAttribute="bottom" constant="187" id="pw0-hq-w5d"/>
+                                                <constraint firstItem="Tdz-zx-dEI" firstAttribute="leading" secondItem="0Ze-2p-N1P" secondAttribute="leading" constant="86" id="wnl-Co-jSx"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="375" height="391"/>
+                                        <connections>
+                                            <outlet property="imgForAnimal" destination="VcD-CL-oLb" id="6tr-GC-R4o"/>
+                                            <outlet property="labelForAnimal" destination="Tdz-zx-dEI" id="CQs-ir-eWt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="jM1-SM-nBQ" id="oR0-i8-Dmk"/>
+                                    <outlet property="delegate" destination="jM1-SM-nBQ" id="CZ7-XJ-g1s"/>
+                                </connections>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="CtY-uX-XLx">
+                                <rect key="frame" x="329" y="515" width="69" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="yaz-ww-uDa">
+                                <rect key="frame" x="209" y="563" width="53" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="6Zh-DZ-qZc">
+                                <rect key="frame" x="-16" y="478" width="53" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-Nm-9i1">
+                                <rect key="frame" x="37" y="653" width="54" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="inG-zo-5wC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="G4G-rv-NyV" secondAttribute="trailing" constant="-7" id="BOJ-57-044"/>
+                            <constraint firstItem="G4G-rv-NyV" firstAttribute="leading" secondItem="06I-an-NWE" secondAttribute="leading" constant="-8" id="HLx-o6-PGE"/>
+                            <constraint firstItem="G4G-rv-NyV" firstAttribute="top" secondItem="06I-an-NWE" secondAttribute="top" id="U9K-F5-Tdh"/>
+                            <constraint firstAttribute="bottom" secondItem="G4G-rv-NyV" secondAttribute="bottom" constant="-32" id="VBT-u9-hsV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cv" destination="yRV-ji-ci7" id="ZqV-je-OF6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9p-ga-NVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5383" y="-21"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="05d-cW-neS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mqb-aU-Yhc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zza-ms-txM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FN6-0u-g5i" kind="relationship" relationship="rootViewController" id="869-Cn-jkc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CL7-dj-oyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ABCD bc" width="390" height="844"/>
+        <image name="Alphabets" width="276" height="50"/>
+        <image name="Bubbles" width="113" height="82"/>
+        <image name="Numbers" width="242" height="40"/>
+        <image name="animalBC" width="390" height="844"/>
+        <image name="back" width="41" height="39"/>
+        <image name="bc" width="390" height="844"/>
+        <image name="colours" width="204" height="40"/>
+        <image name="play" width="222" height="124"/>
+        <image name="secondPage" width="390" height="844"/>
+        <image name="table" width="305" height="62"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

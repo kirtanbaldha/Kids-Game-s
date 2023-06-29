@@ -7,25 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA11883B2A42DE370013E47B /* firstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11883A2A42DE370013E47B /* firstPage.swift */; };
+		DA1374282A495339009BF5FB /* numberPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1374272A495339009BF5FB /* numberPage.swift */; };
+		DA13742A2A49545C009BF5FB /* CollectionViewCellForNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1374292A49545C009BF5FB /* CollectionViewCellForNumber.swift */; };
+		DA13742C2A496C25009BF5FB /* colourPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13742B2A496C25009BF5FB /* colourPage.swift */; };
+		DA13742E2A496DAB009BF5FB /* CollectionViewCellForColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13742D2A496DAB009BF5FB /* CollectionViewCellForColour.swift */; };
+		DA3B8CDB2A4415EE00A465B7 /* secondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B8CDA2A4415EE00A465B7 /* secondPage.swift */; };
+		DA3B8CDD2A44193800A465B7 /* CollectionViewCellForSecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B8CDC2A44193800A465B7 /* CollectionViewCellForSecondPage.swift */; };
+		DA3B8CDF2A441F1700A465B7 /* ABCDpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B8CDE2A441F1700A465B7 /* ABCDpage.swift */; };
+		DA3B8CE12A4420A300A465B7 /* CollectionViewCellForABCDpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B8CE02A4420A300A465B7 /* CollectionViewCellForABCDpage.swift */; };
+		DA40E54D2A4A9B3A0020DE94 /* CollectionViewCellForAbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40E54C2A4A9B3A0020DE94 /* CollectionViewCellForAbc.swift */; };
+		DA40E54F2A4AA0AC0020DE94 /* TowZaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40E54E2A4AA0AC0020DE94 /* TowZaPage.swift */; };
+		DA40E5512A4AA22E0020DE94 /* CollectionViewCellFormultiPlicationTabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40E5502A4AA22E0020DE94 /* CollectionViewCellFormultiPlicationTabel.swift */; };
 		DA7573CD2A417B02007B4CA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7573CC2A417B02007B4CA6 /* AppDelegate.swift */; };
 		DA7573CF2A417B02007B4CA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7573CE2A417B02007B4CA6 /* SceneDelegate.swift */; };
-		DA7573D12A417B02007B4CA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7573D02A417B02007B4CA6 /* ViewController.swift */; };
 		DA7573D42A417B02007B4CA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7573D22A417B02007B4CA6 /* Main.storyboard */; };
 		DA7573D72A417B02007B4CA6 /* Kids_Game_s.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA7573D52A417B02007B4CA6 /* Kids_Game_s.xcdatamodeld */; };
 		DA7573D92A417B04007B4CA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7573D82A417B04007B4CA6 /* Assets.xcassets */; };
 		DA7573DC2A417B04007B4CA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7573DA2A417B04007B4CA6 /* LaunchScreen.storyboard */; };
+		DAEFF18E2A4BF8E7008BDFA4 /* AnimalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEFF18D2A4BF8E7008BDFA4 /* AnimalPage.swift */; };
+		DAEFF1902A4BFB3F008BDFA4 /* CollectionViewCellForAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEFF18F2A4BFB3F008BDFA4 /* CollectionViewCellForAnimal.swift */; };
+		DAF061702A4D3E02001F9DE8 /* CollectionViewCellForSecondPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0616F2A4D3E02001F9DE8 /* CollectionViewCellForSecondPage1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA11883A2A42DE370013E47B /* firstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstPage.swift; sourceTree = "<group>"; };
+		DA1374272A495339009BF5FB /* numberPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = numberPage.swift; sourceTree = "<group>"; };
+		DA1374292A49545C009BF5FB /* CollectionViewCellForNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForNumber.swift; sourceTree = "<group>"; };
+		DA13742B2A496C25009BF5FB /* colourPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colourPage.swift; sourceTree = "<group>"; };
+		DA13742D2A496DAB009BF5FB /* CollectionViewCellForColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForColour.swift; sourceTree = "<group>"; };
+		DA3B8CDA2A4415EE00A465B7 /* secondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondPage.swift; sourceTree = "<group>"; };
+		DA3B8CDC2A44193800A465B7 /* CollectionViewCellForSecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForSecondPage.swift; sourceTree = "<group>"; };
+		DA3B8CDE2A441F1700A465B7 /* ABCDpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCDpage.swift; sourceTree = "<group>"; };
+		DA3B8CE02A4420A300A465B7 /* CollectionViewCellForABCDpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForABCDpage.swift; sourceTree = "<group>"; };
+		DA40E54C2A4A9B3A0020DE94 /* CollectionViewCellForAbc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForAbc.swift; sourceTree = "<group>"; };
+		DA40E54E2A4AA0AC0020DE94 /* TowZaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowZaPage.swift; sourceTree = "<group>"; };
+		DA40E5502A4AA22E0020DE94 /* CollectionViewCellFormultiPlicationTabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellFormultiPlicationTabel.swift; sourceTree = "<group>"; };
 		DA7573C92A417B02007B4CA6 /* Kids Game's.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids Game's.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7573CC2A417B02007B4CA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA7573CE2A417B02007B4CA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA7573D02A417B02007B4CA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA7573D32A417B02007B4CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA7573D62A417B02007B4CA6 /* Kids_Game_s.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kids_Game_s.xcdatamodel; sourceTree = "<group>"; };
 		DA7573D82A417B04007B4CA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA7573DB2A417B04007B4CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA7573DD2A417B04007B4CA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAEFF18D2A4BF8E7008BDFA4 /* AnimalPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPage.swift; sourceTree = "<group>"; };
+		DAEFF18F2A4BFB3F008BDFA4 /* CollectionViewCellForAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForAnimal.swift; sourceTree = "<group>"; };
+		DAF0616F2A4D3E02001F9DE8 /* CollectionViewCellForSecondPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForSecondPage1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +70,15 @@
 		DA7573C02A417B02007B4CA6 = {
 			isa = PBXGroup;
 			children = (
+				DA40E54E2A4AA0AC0020DE94 /* TowZaPage.swift */,
+				DA40E5502A4AA22E0020DE94 /* CollectionViewCellFormultiPlicationTabel.swift */,
+				DA40E54C2A4A9B3A0020DE94 /* CollectionViewCellForAbc.swift */,
+				DA13742D2A496DAB009BF5FB /* CollectionViewCellForColour.swift */,
+				DA13742B2A496C25009BF5FB /* colourPage.swift */,
+				DA1374272A495339009BF5FB /* numberPage.swift */,
+				DA1374292A49545C009BF5FB /* CollectionViewCellForNumber.swift */,
+				DA3B8CDE2A441F1700A465B7 /* ABCDpage.swift */,
+				DA11883A2A42DE370013E47B /* firstPage.swift */,
 				DA7573CB2A417B02007B4CA6 /* Kids Game's */,
 				DA7573CA2A417B02007B4CA6 /* Products */,
 			);
@@ -60,8 +97,13 @@
 			children = (
 				DA7573CC2A417B02007B4CA6 /* AppDelegate.swift */,
 				DA7573CE2A417B02007B4CA6 /* SceneDelegate.swift */,
-				DA7573D02A417B02007B4CA6 /* ViewController.swift */,
 				DA7573D22A417B02007B4CA6 /* Main.storyboard */,
+				DAF0616F2A4D3E02001F9DE8 /* CollectionViewCellForSecondPage1.swift */,
+				DAEFF18D2A4BF8E7008BDFA4 /* AnimalPage.swift */,
+				DAEFF18F2A4BFB3F008BDFA4 /* CollectionViewCellForAnimal.swift */,
+				DA3B8CE02A4420A300A465B7 /* CollectionViewCellForABCDpage.swift */,
+				DA3B8CDA2A4415EE00A465B7 /* secondPage.swift */,
+				DA3B8CDC2A44193800A465B7 /* CollectionViewCellForSecondPage.swift */,
 				DA7573D82A417B04007B4CA6 /* Assets.xcassets */,
 				DA7573DA2A417B04007B4CA6 /* LaunchScreen.storyboard */,
 				DA7573DD2A417B04007B4CA6 /* Info.plist */,
@@ -141,10 +183,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA7573D12A417B02007B4CA6 /* ViewController.swift in Sources */,
 				DA7573CD2A417B02007B4CA6 /* AppDelegate.swift in Sources */,
+				DA3B8CDB2A4415EE00A465B7 /* secondPage.swift in Sources */,
+				DA40E54D2A4A9B3A0020DE94 /* CollectionViewCellForAbc.swift in Sources */,
+				DAEFF1902A4BFB3F008BDFA4 /* CollectionViewCellForAnimal.swift in Sources */,
+				DA1374282A495339009BF5FB /* numberPage.swift in Sources */,
+				DA40E54F2A4AA0AC0020DE94 /* TowZaPage.swift in Sources */,
 				DA7573D72A417B02007B4CA6 /* Kids_Game_s.xcdatamodeld in Sources */,
+				DA3B8CE12A4420A300A465B7 /* CollectionViewCellForABCDpage.swift in Sources */,
 				DA7573CF2A417B02007B4CA6 /* SceneDelegate.swift in Sources */,
+				DA3B8CDF2A441F1700A465B7 /* ABCDpage.swift in Sources */,
+				DA40E5512A4AA22E0020DE94 /* CollectionViewCellFormultiPlicationTabel.swift in Sources */,
+				DAF061702A4D3E02001F9DE8 /* CollectionViewCellForSecondPage1.swift in Sources */,
+				DAEFF18E2A4BF8E7008BDFA4 /* AnimalPage.swift in Sources */,
+				DA11883B2A42DE370013E47B /* firstPage.swift in Sources */,
+				DA13742C2A496C25009BF5FB /* colourPage.swift in Sources */,
+				DA3B8CDD2A44193800A465B7 /* CollectionViewCellForSecondPage.swift in Sources */,
+				DA13742E2A496DAB009BF5FB /* CollectionViewCellForColour.swift in Sources */,
+				DA13742A2A49545C009BF5FB /* CollectionViewCellForNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
